@@ -21,7 +21,7 @@ import oracle.jdbc.OracleTypes;
 public class CentroBD extends GenericoBD
 {
     
-    public static ArrayList visualizarListaIdsCentros() throws SQLException
+    public static ArrayList visualizarListaIdsCentros() 
     {
         GenericoBD.abrirConexion();
         Connection conn = GenericoBD.getCon();
@@ -29,16 +29,16 @@ public class CentroBD extends GenericoBD
         Centro c = null;
         try
         {
-           CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.visualizar_lista_ids_centro(?)}");
-           
-           cs.registerOutParameter(1, OracleTypes.CURSOR);
-           cs.execute();
-           ResultSet rs = (ResultSet)cs.getObject(1);
-           while(rs.next())
-           {
-               c = new Centro(rs.getInt(1),null,null,0,null,null,null,null);
-               idsCentro.add(c);
-           }
+            CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.visualizar_lista_ids_centro(?)}");
+
+            cs.registerOutParameter(1, OracleTypes.CURSOR);
+            cs.execute();
+            ResultSet rs = (ResultSet)cs.getObject(1);
+            while(rs.next())
+            {
+                c = new Centro(rs.getInt(1),null,null,0,null,null,null,null);
+                idsCentro.add(c);
+            }
         }
         catch(Exception e)
         {
@@ -49,10 +49,10 @@ public class CentroBD extends GenericoBD
         {
            cerrarConexion();
         }
-       return idsCentro;
+        return idsCentro;
     }
     
-    public static ArrayList visualizarListaNombreCentros() throws SQLException
+    public static ArrayList visualizarListaNombreCentros() 
     {
         GenericoBD.abrirConexion();
         Connection conn = GenericoBD.getCon();
@@ -60,16 +60,16 @@ public class CentroBD extends GenericoBD
         Centro c = null;
         try
         {
-           CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.visualizar_lista_nombre_centro(?)}");
-           
-           cs.registerOutParameter(1, OracleTypes.CURSOR);
-           cs.execute();
-           ResultSet rs = (ResultSet)cs.getObject(1);
-           while(rs.next())
-           {
-               c = new Centro(0,rs.getString(1),null,0,null,null,null,null);
-               nombreCentros.add(c);
-           }
+            CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.visualizar_lista_nombre_centro(?)}");
+
+            cs.registerOutParameter(1, OracleTypes.CURSOR);
+            cs.execute();
+            ResultSet rs = (ResultSet)cs.getObject(1);
+            while(rs.next())
+            {
+                c = new Centro(0,rs.getString(1),null,0,null,null,null,null);
+                nombreCentros.add(c);
+            }
         }
         catch(Exception e)
         {
@@ -80,54 +80,54 @@ public class CentroBD extends GenericoBD
         {
            cerrarConexion();
         }
-       return nombreCentros;
+        return nombreCentros;
     }
     
-    public static Centro visualizarCentroId(Centro c) throws SQLException
+    public static Centro visualizarCentroId(Centro c) 
     {
-       GenericoBD.abrirConexion();
-       Connection conn = GenericoBD.getCon();
-       int idCentro =c.getIdCentro();
-       try
-       {
-           CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.visualizar_datos_centro(?,?)}");
-           cs.setInt(1, idCentro);
-           cs.registerOutParameter(2, OracleTypes.CURSOR);
-           cs.execute();
-           ResultSet rs = (ResultSet)cs.getObject(2);
-           if(rs.next())
-           {
-               c = new Centro(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8));
-           }
-       }
-       catch(Exception e)
-       {
-           c = null;
-           e.printStackTrace();
-       }
-       finally
-       {
-           cerrarConexion();
-       }
-       return c;
+        GenericoBD.abrirConexion();
+        Connection conn = GenericoBD.getCon();
+        int idCentro =c.getIdCentro();
+        try
+        {
+            CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.visualizar_datos_centro(?,?)}");
+            cs.setInt(1, idCentro);
+            cs.registerOutParameter(2, OracleTypes.CURSOR);
+            cs.execute();
+            ResultSet rs = (ResultSet)cs.getObject(2);
+            if(rs.next())
+            {
+                c = new Centro(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8));
+            }
+        }
+        catch(Exception e)
+        {
+            c = null;
+            e.printStackTrace();
+        }
+        finally
+        {
+            cerrarConexion();
+        }
+        return c;
     }
     
-    public static Centro visualizarCentroNombre(Centro c) throws SQLException
+    public static Centro visualizarCentroNombre(Centro c) 
     {
         GenericoBD.abrirConexion();
         Connection conn = GenericoBD.getCon();
         String nombreCentro=c.getNombre();
         try
         {
-           CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.visualizar_datos_centro_nombre(?,?)}");
-           cs.setString(1, nombreCentro);
-           cs.registerOutParameter(2, OracleTypes.CURSOR);
-           cs.execute();
-           ResultSet rs = (ResultSet)cs.getObject(2);
-           if(rs.next())
-           {
-               c = new Centro(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8));
-           }
+            CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.visualizar_datos_centro_nombre(?,?)}");
+            cs.setString(1, nombreCentro);
+            cs.registerOutParameter(2, OracleTypes.CURSOR);
+            cs.execute();
+            ResultSet rs = (ResultSet)cs.getObject(2);
+            if(rs.next())
+            {
+                c = new Centro(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8));
+            }
         }
         catch(Exception e)
         {
@@ -141,65 +141,66 @@ public class CentroBD extends GenericoBD
        return c;
     }
     
-    public static Centro BuscarCentroId(Centro c) throws SQLException
-    {
-       GenericoBD.abrirConexion();
-       Connection conn = GenericoBD.getCon();
-       int idCentro=c.getIdCentro();
-       try
-       {
-           CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.buscar_centro_por_id(?,?)}");
-           cs.setInt(1, idCentro);
-           cs.registerOutParameter(2, OracleTypes.CURSOR);
-           cs.execute();
-           ResultSet rs = (ResultSet)cs.getObject(2);
-           if(rs.next())
-           {
-               c = new Centro(idCentro,rs.getString(1),null,0,null,null,null,null);
-           }
-       }
-       catch(Exception e)
-       {
-           c = null;
-           e.printStackTrace();
-       }
-       finally
-       {
-           cerrarConexion();
-       }
-       return c;
-    }
-    
-    public static Centro BuscarCentroNombre(Centro c) throws SQLException
+    public static Centro BuscarCentroId(Centro c) 
     {
         GenericoBD.abrirConexion();
-       Connection conn = GenericoBD.getCon();
-       String nombre =c.getNombre();
-       try
-       {
-           CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.buscar_centro_por_nombre(?,?)}");
-           cs.setString(1, nombre);
-           cs.registerOutParameter(2, OracleTypes.CURSOR);
-           cs.execute();
-           ResultSet rs = (ResultSet)cs.getObject(2);
-           if(rs.next())
-           {
-               c = new Centro(rs.getInt(1),nombre,null,0,null,null,null,null);
-           }
-       }
-       catch(Exception e)
-       {
-           c = null;
-           e.printStackTrace();
-       }
-       finally
-       {
-           cerrarConexion();
-       }
-       return c;
+        Connection conn = GenericoBD.getCon();
+        int idCentro=c.getIdCentro();
+        try
+        {
+            CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.buscar_centro_por_id(?,?)}");
+            cs.setInt(1, idCentro);
+            cs.registerOutParameter(2, OracleTypes.CURSOR);
+            cs.execute();
+            ResultSet rs = (ResultSet)cs.getObject(2);
+            if(rs.next())
+            {
+                c = new Centro(idCentro,rs.getString(1),null,0,null,null,null,null);
+            }
+        }
+        catch(Exception e)
+        {
+            c = null;
+            e.printStackTrace();
+        }
+        finally
+        {
+            cerrarConexion();
+        }
+        return c;
     }
     
-    public static void insertarCentro(Centro c) throws SQLException{
+    public static Centro BuscarCentroNombre(Centro c) 
+    {
+        GenericoBD.abrirConexion();
+        Connection conn = GenericoBD.getCon();
+        String nombre =c.getNombre();
+        try
+        {
+            CallableStatement cs = conn.prepareCall("{call PAQUETE_CENTRO2.buscar_centro_por_nombre(?,?)}");
+            cs.setString(1, nombre);
+            cs.registerOutParameter(2, OracleTypes.CURSOR);
+            cs.execute();
+            ResultSet rs = (ResultSet)cs.getObject(2);
+            if(rs.next())
+            {
+                c = new Centro(rs.getInt(1),nombre,null,0,null,null,null,null);
+            }
+        }
+        catch(Exception e)
+        {
+            c = null;
+            e.printStackTrace();
+        }
+        finally
+        {
+            cerrarConexion();
+        }
+        return c;
+    }
+    
+    public static void insertarCentro(Centro c)
+    {
         GenericoBD.abrirConexion();
         Connection conn = GenericoBD.getCon();
         try
@@ -228,37 +229,39 @@ public class CentroBD extends GenericoBD
         }
     }
         
-        public static void modificar(Centro c) throws SQLException{
-        Connection conn = GenericoBD.getCon();
-        int idCentro=c.getIdCentro();
-        String plantilla = "UPDATE CENTROS SET(NOMBRE, TELEFONO, CALLE, NUMERO, CP, CIUDAD, PROVINCIA) VALUES (?,?,?,?,?,?,?) WHERE IDCENTRO = "+ idCentro;
-        try
+        public static void modificar(Centro c) 
         {
-        PreparedStatement ps=conn.prepareStatement(plantilla);
-        ps.setString(1,c.getNombre());
-        ps.setString(3,c.getCalle());
-        ps.setInt(4,c.getNumero());
-        ps.setString(5,c.getCp());
-        ps.setString(6,c.getCiudad());
-        ps.setString(7,c.getProvincia());
-        ps.setString(8,c.getTelefono());
-        ps.executeUpdate();
-        conn.commit();
-        }
-        catch(Exception e)
-        {
-           c = null;
-           e.printStackTrace();
-        }
-        finally
-        {
-           cerrarConexion();
-        }
-        
+            Connection conn = GenericoBD.getCon();
+            int idCentro=c.getIdCentro();
+            String plantilla = "UPDATE CENTROS SET(NOMBRE, TELEFONO, CALLE, NUMERO, CP, CIUDAD, PROVINCIA) VALUES (?,?,?,?,?,?,?) WHERE IDCENTRO = "+ idCentro;
+            try
+            {
+            PreparedStatement ps=conn.prepareStatement(plantilla);
+            ps.setString(1,c.getNombre());
+            ps.setString(3,c.getCalle());
+            ps.setInt(4,c.getNumero());
+            ps.setString(5,c.getCp());
+            ps.setString(6,c.getCiudad());
+            ps.setString(7,c.getProvincia());
+            ps.setString(8,c.getTelefono());
+            ps.executeUpdate();
+            conn.commit();
+            }
+            catch(Exception e)
+            {
+               c = null;
+               e.printStackTrace();
+            }
+            finally
+            {
+               cerrarConexion();
+            }
+
             
         }
         
-        public static void borrarCentro(Centro c) throws SQLException{
+    public static void borrarCentro(Centro c)
+    {
         GenericoBD.abrirConexion();
         Connection conn = GenericoBD.getCon();
         int idCentro = c.getIdCentro();
