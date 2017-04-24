@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Jefe" directorySegmentName="seg_0" id="F342817A-8AA4-9A16-7ED6-094D8D5E1D74">
+<createdBy>Al</createdBy>
+<createdTime>2017-04-24 11:11:01 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<targetPk>CE1309A5-150E-DE6B-ECF6-EFD78395A37C</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2BC42550-C319-CB03-9066-50D1C48CF1A3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2BC42550-C319-CB03-9066-50D1C48CF1A3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
