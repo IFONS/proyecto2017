@@ -38,7 +38,8 @@ public class TrabajadorBD extends GenericoBD
             ResultSet rs = (ResultSet)cs.getObject(1);
             while(rs.next())
             {
-                t = new Trabajador(0, rs.getString(1), null, null, null, null, null, null, null, null, null, 0.0, null, null,null);
+                t = new Trabajador(0, rs.getString(1), null, null, null, null, null, 
+                        null, null, null, null, 0.0, null, null,null);
                 dnisTrabajador.add(t);
             }
         }
@@ -72,8 +73,11 @@ public class TrabajadorBD extends GenericoBD
             ResultSet rs = (ResultSet)cs.getObject(2);
             while(rs.next())
             {
-                a=new Administrador(rs.getInt(1), rs.getString(2), rs.getInt(3),rs.getString(4), rs.getString(5),rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(11), rs.getString(12), rs.getDouble(13), rs.getDate(14),rs.getString(15), new Centro(rs.getInt(16), null, null, 0, null, null, null, null));
+                a=new Administrador(0, rs.getString(1), 0,null,null,null, null,null, null, 
+                 null, null, null, 0.0, null,admin, null);
                 adminTrabajadores.add(a); 
+                /*a=new Administrador(rs.getInt(1), rs.getString(2), rs.getInt(3),rs.getString(4), rs.getString(5),rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(11), rs.getString(12), rs.getDouble(13), rs.getDate(14),rs.getString(15), new Centro(rs.getInt(16), null, null, 0, null, null, null, null));*/ 
+                
             }
         }
         catch(Exception e)
@@ -88,7 +92,7 @@ public class TrabajadorBD extends GenericoBD
         return adminTrabajadores;
     }
     
-    public static ArrayList visualizar_datos_trabajador(Trabajador t) 
+    public static ArrayList visualizar_lista_logistica(Trabajador t) 
     {
         GenericoBD.abrirConexion();
         Connection conn = GenericoBD.getCon();
@@ -106,10 +110,10 @@ public class TrabajadorBD extends GenericoBD
             ResultSet rs = (ResultSet)cs.getObject(2);
             while(rs.next())
             {
-                t=new Trabajador(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5),
-                rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), 
-                rs.getString(11), rs.getDouble(12), rs.getDate(13),rs.getString(14), new Centro(rs.getInt(15), null, null, 0, null, null, null, null));
-                logisticTrabajadores.add(t); 
+                
+                t=new Trabajador(0, rs.getString(1), null, null, null, null, null, null, null, null, 
+                null, 0.0, null,logistic, null);
+                logisticTrabajadores.add(t);
             }
         }
         catch(Exception e)
@@ -123,6 +127,78 @@ public class TrabajadorBD extends GenericoBD
         }
         return logisticTrabajadores;
     }
+    
+    public static Trabajador visualizar_datos_trabajador(Trabajador t) 
+    {
+        GenericoBD.abrirConexion();
+        Connection conn = GenericoBD.getCon();
+        String dni=t.getDni();
+    
+        
+        try
+        {
+            CallableStatement cs = conn.prepareCall("{call PAQUETE_TRABAJADOR2.visualizar_datos_trabajador(?,?)}");
+
+            cs.setString(1, dni);
+            cs.registerOutParameter(2, OracleTypes.CURSOR);
+            cs.execute();
+            ResultSet rs = (ResultSet)cs.getObject(2);
+            while(rs.next())
+            {
+                t=new Trabajador(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5),
+                rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), 
+                rs.getString(11), rs.getDouble(12), rs.getDate(13),rs.getString(14), new Centro(rs.getInt(15), null, null, 0, null, null, null, null));
+                
+            }
+        }
+        catch(Exception e)
+        {
+            
+            e.printStackTrace();
+        }
+        finally
+        {
+           cerrarConexion();
+        }
+        return t;
+    }
+    
+    public static Trabajador buscarTrabajador(Trabajador t) 
+    {
+        GenericoBD.abrirConexion();
+        Connection conn = GenericoBD.getCon();
+        String dni=t.getDni();
+    
+        
+        try
+        {
+            CallableStatement cs = conn.prepareCall("{call PAQUETE_TRABAJADOR2.buscar_trabajador(?,?)}");
+
+            cs.setString(1, dni);
+            cs.registerOutParameter(2, OracleTypes.CURSOR);
+            cs.execute();
+            ResultSet rs = (ResultSet)cs.getObject(2);
+            while(rs.next())
+            {
+                t=new Trabajador(0, dni, rs.getString(1), null, null, null, null, null, null, null, 
+                        null, 0.0, null, null, null);
+                
+                /*a=new Administrador(rs.getInt(1), rs.getString(2), rs.getInt(3),rs.getString(4), rs.getString(5),rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(11), rs.getString(12), rs.getDouble(13), rs.getDate(14),rs.getString(15), new Centro(rs.getInt(16), null, null, 0, null, null, null, null));*/ 
+                
+            }
+        }
+        catch(Exception e)
+        {
+            
+            e.printStackTrace();
+        }
+        finally
+        {
+           cerrarConexion();
+        }
+        return t;
+    }
+    
     public static void actualizarTrabajador(Trabajador t) 
     {
         GenericoBD.abrirConexion();
@@ -137,7 +213,7 @@ public class TrabajadorBD extends GenericoBD
             {
                 
                 
-                plantilla = "UPDATE TRABAJADORES SET JEFE="+a.getIdJefe()+",NOMBRE="+a.getNombre()
+                plantilla = "UPDATE TRABAJADORES NOMBRE="+a.getNombre()
                         +",APELLIDOUNO="+a.getApellidouno()+",APELLIDODOS="+a.getApellidodos()
                         +",CALLE="+a.getCalle()+",PORTAL="+a.getPortal()+",PISO="+a.getPiso()
                         +",MANO="+a.getMano()+",TELEFEMPRE="+a.getTelefempre()+",TELEFPERSO="
@@ -146,7 +222,7 @@ public class TrabajadorBD extends GenericoBD
             }
             else
             {
-                plantilla = "UPDATE TRABAJADORES SET JEFE="+null+",NOMBRE="+t.getNombre()
+                plantilla = "UPDATE TRABAJADORES SET NOMBRE="+t.getNombre()
                         +",APELLIDOUNO="+t.getApellidouno()+",APELLIDODOS="+t.getApellidodos()
                         +",CALLE="+t.getCalle()+",PORTAL="+t.getPortal()+",PISO="+t.getPiso()
                         +",MANO="+t.getMano()+",TELEFEMPRE="+t.getTelefempre()+",TELEFPERSO="+t.getTelefperso()
@@ -181,7 +257,7 @@ public class TrabajadorBD extends GenericoBD
             {
                 
                 
-                plantilla = "INSERT INTO TRABAJADORES VALUES DNI="+a.getDni()+",JEFE="+a.getIdJefe()+",NOMBRE="+a.getNombre()
+                plantilla = "INSERT INTO TRABAJADORES VALUES DNI="+a.getDni()+",NOMBRE="+a.getNombre()
                         +",APELLIDOUNO="+a.getApellidouno()+",APELLIDODOS="+a.getApellidodos()
                         +",CALLE="+a.getCalle()+",PORTAL="+a.getPortal()+",PISO="+a.getPiso()
                         +",MANO="+a.getMano()+",TELEFEMPRE="+a.getTelefempre()+",TELEFPERSO="+a.getTelefperso()
@@ -190,7 +266,7 @@ public class TrabajadorBD extends GenericoBD
             }
             else
             {
-                plantilla = "INSERT INTO TRABAJADORES VALUES DNI="+t.getDni()+",JEFE="+null+",NOMBRE="+t.getNombre()
+                plantilla = "INSERT INTO TRABAJADORES VALUES DNI="+t.getDni()+",NOMBRE="+t.getNombre()
                         +",APELLIDOUNO="+t.getApellidouno()+",APELLIDODOS="+t.getApellidodos()
                         +",CALLE="+t.getCalle()+",PORTAL="+t.getPortal()+",PISO="+t.getPiso()
                         +",MANO="+t.getMano()+",TELEFEMPRE="+t.getTelefempre()+",TELEFPERSO="+t.getTelefperso()
