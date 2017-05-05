@@ -126,22 +126,6 @@
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Trabajador_idTrabajador" id="9F06F658-F846-8261-2C6D-F2DCAEAE3F05">
-<createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:22:52 UTC</createdTime>
-<generatorID>F70BB286-E048-76EF-6C0F-5AB2B1CE7C0E</generatorID>
-<ownerDesignName>logico</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="5DA86D91-563C-8460-BF28-6A89DAAB9844" referredColumn="89DE63CF-F088-CF7A-E51B-3EAEE83FBBDA"/>
-</associations>
-</Column>
 <Column name="Vehiculo_codVehiculo" id="DA6C14AC-B254-4E4C-695F-A21E65500751">
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:22:52 UTC</createdTime>
@@ -151,12 +135,53 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>20</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="C7DD8196-5991-86D0-E435-1D66248EA113" referredColumn="6F1A407E-4B95-7A71-F202-1C1CFA019CFE"/>
 </associations>
+</Column>
+<Column name="Trabajador_idTrabajador2" id="24096A9D-6B1E-5CB1-AAA3-3A6BE70C4736">
+<createdBy>Al</createdBy>
+<createdTime>2017-04-25 17:19:46 UTC</createdTime>
+<generatorID>43558F96-BCA9-BA7E-C2D5-E95C66E9D5D3</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B6512BC-65AD-7AB4-4F66-901DB2C9DDF6" referredColumn="89DE63CF-F088-CF7A-E51B-3EAEE83FBBDA"/>
+</associations>
+</Column>
+<Column name="hExtra" id="DF0F666D-342B-AB78-B9D8-088ECC477254">
+<createdBy>Al</createdBy>
+<createdTime>2017-04-25 18:40:31 UTC</createdTime>
+<generatorID>E7E30407-4ABA-9B94-ADDF-B6BCC4FBB714</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="A8C07191-A569-D6BB-BEB2-8E04B0DA09E6">
+<createdBy>Al</createdBy>
+<createdTime>2017-04-25 18:55:38 UTC</createdTime>
+<generatorID>9446F721-3048-75F7-AB4B-E28A632A8E50</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -172,17 +197,6 @@
 <colUsage columnID="C69784C9-374D-B2D0-E554-C2AECAEA47F4"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="1EA21707-B41C-35C0-C969-FEFE8761D501" name="Parte_Trabajador_FK">
-<createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:22:52 UTC</createdTime>
-<generatorID>48E954A5-0F3F-2A63-3849-AE91570B8747</generatorID>
-<ownerDesignName>logico</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="9F06F658-F846-8261-2C6D-F2DCAEAE3F05"/>
-</indexColumnUsage>
-</ind_PK_UK>
 <ind_PK_UK id="A947163D-B45F-BD2D-EA78-FAD1FD228B86" name="Parte_Vehiculo_FK">
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:22:52 UTC</createdTime>
@@ -192,6 +206,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="DA6C14AC-B254-4E4C-695F-A21E65500751"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71B79501-00AC-7E92-35A1-5D81F6CC8BDB" name="Parte_Trabajador_FKv1">
+<createdBy>Al</createdBy>
+<createdTime>2017-04-25 17:19:46 UTC</createdTime>
+<generatorID>B9D72ABC-CC37-C63B-1DDF-45526F9E122C</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24096A9D-6B1E-5CB1-AAA3-3A6BE70C4736"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

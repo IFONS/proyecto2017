@@ -43,7 +43,6 @@ DROP TABLE centros CASCADE CONSTRAINTS;
   (
     idTrab    NUMBER(3) ,
     dni       VARCHAR2 (9) NOT NULL,
-    jefe      NUMBER(9),
     nombre    VARCHAR2 (30) NOT NULL ,
     apellidouno     VARCHAR2 (30) NOT NULL,
     apellidodos     VARCHAR2 (30) NOT NULL,
@@ -58,8 +57,6 @@ DROP TABLE centros CASCADE CONSTRAINTS;
     categoria VARCHAR2(10) NOT NULL,
     centro  NUMBER (3) NOT NULL,
     CONSTRAINT pk_trabajadores PRIMARY KEY (idTrab),
-    CONSTRAINT fk_trabajadores_jefe FOREIGN KEY (JEFE)
-      REFERENCES Trabajadores(idTrab),
     CONSTRAINT fk_centros_id FOREIGN KEY (centro)
       REFERENCES centros(idCentro),
     CONSTRAINT ckCategoria CHECK (categoria IN ('Logistica','Administracion'))
@@ -86,12 +83,14 @@ DROP TABLE centros CASCADE CONSTRAINTS;
     fecha DATE NOT NULL,
     kmInicio NUMBER(4) NOT NULL,
     kmFinal NUMBER(4) NOT NULL,
-    gasoil NUMBER(4) NOT NULL,
-    dietas NUMBER(4) NOT NULL,
-    otros NUMBER(4) NOT NULL,
-    incidencias NUMBER(4) NOT NULL,
+    gasoil NUMBER(4),
+    dietas NUMBER(4),
+    otros NUMBER(4),
+    incidencias NUMBER(4),
     trabajador NUMBER(3) NOT NULL,
     vehiculo  NUMBER(3) NOT NULL,
+	hExtra NUMBER(4,2),
+	estado VARCHAR2(20),
     CONSTRAINT pk_partes PRIMARY KEY (idParte),
     CONSTRAINT fk_id_traba FOREIGN KEY (trabajador)
       REFERENCES trabajadores(idTrab),

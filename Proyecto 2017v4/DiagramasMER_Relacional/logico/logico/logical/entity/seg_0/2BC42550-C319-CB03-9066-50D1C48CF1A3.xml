@@ -3,6 +3,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:46:14 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,6 +19,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:46:26 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -26,6 +32,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:46:58 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -36,6 +45,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:47:31 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -46,6 +58,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:47:50 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -56,16 +71,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:48:08 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="categoria" id="05DC6C93-5331-A556-124A-012781179C1D">
-<createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:13:42 UTC</createdTime>
-<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -76,6 +84,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:48:27 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -86,6 +97,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:48:39 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -96,6 +110,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:49:24 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -106,6 +123,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:50:12 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -116,6 +136,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:51:01 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -127,6 +150,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:51:14 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -139,6 +165,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:51:52 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -146,52 +175,64 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="idTrabajador1" id="D87E52DD-1BD8-C68B-70E6-A8D849D4A8B9">
-<createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:11:01 UTC</createdTime>
-<generatorID>F342817A-8AA4-9A16-7ED6-094D8D5E1D74</generatorID>
-<ownerDesignName>logico</ownerDesignName>
-<referedAttribute>410B3E9F-0C5A-AFC2-A2C4-DEB86E57BB39</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="idCentro" id="EB47AC5F-7920-E6B4-4409-E7BF54173ABD">
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:11:40 UTC</createdTime>
 <generatorID>3D657ED6-5AC0-3C69-C727-1132B9AAB441</generatorID>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <referedAttribute>444BC67F-10F8-1591-9BBB-5FEA2BF91AB2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>20</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="codAviso" id="E7C5C736-C41B-B32D-4885-B2B0D752F32B">
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:12:45 UTC</createdTime>
 <generatorID>4AA36979-D47F-46CD-552A-CC1DDD41182E</generatorID>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <referedAttribute>EA041534-D6CC-E65D-8527-337DD90AB12E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>20</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="idUsuario" id="28A1B242-2DBB-85E6-4640-9D3F0FAB4E19">
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:15:23 UTC</createdTime>
 <generatorID>11D5A85F-3F96-46E4-08A4-5243452CF15B</generatorID>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <referedAttribute>2CEDB704-AA72-7AAE-735A-298297FB19BF</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idTipo" id="DAAC0F18-6B31-00B5-7A2A-4FFCB1075B0B">
+<createdBy>Al</createdBy>
+<createdTime>2017-05-05 10:29:55 UTC</createdTime>
+<generatorID>76CF5B71-E839-4519-6179-45D861FF8509</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
+<referedAttribute>B93F3230-2AE1-5447-E2D3-D55B4A2F3EFB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -200,6 +241,10 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 10:46:56 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="false"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>410B3E9F-0C5A-AFC2-A2C4-DEB86E57BB39</attributeRef>

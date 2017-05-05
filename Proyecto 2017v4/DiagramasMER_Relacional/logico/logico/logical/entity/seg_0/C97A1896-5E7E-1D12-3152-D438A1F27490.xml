@@ -3,6 +3,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:00:46 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,6 +19,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:00:56 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -26,6 +32,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:01:08 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -35,6 +44,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:01:18 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT020</logicalDatatype>
@@ -46,6 +58,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:01:42 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT020</logicalDatatype>
@@ -53,10 +68,25 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,20,2</ownDataTypeParameters>
 </Attribute>
+<Attribute name="estado" id="9446F721-3048-75F7-AB4B-E28A632A8E50">
+<createdBy>Al</createdBy>
+<createdTime>2017-04-25 18:55:01 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="gasoil" id="5274612E-E230-BB80-CD72-823F6C729C31">
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:01:58 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -69,6 +99,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:02:19 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -81,6 +114,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:02:35 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -93,6 +129,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:02:51 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -105,6 +144,9 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:03:14 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -112,29 +154,50 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="idTrabajador" id="F70BB286-E048-76EF-6C0F-5AB2B1CE7C0E">
-<createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:17:39 UTC</createdTime>
-<generatorID>48E954A5-0F3F-2A63-3849-AE91570B8747</generatorID>
-<ownerDesignName>logico</ownerDesignName>
-<referedAttribute>410B3E9F-0C5A-AFC2-A2C4-DEB86E57BB39</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="codVehiculo" id="E95B5E27-8A52-8A56-09EE-A39D4154D747">
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:18:12 UTC</createdTime>
 <generatorID>26ABB0A6-99BE-8839-336D-FF9E3CCBDD43</generatorID>
 <ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
 <referedAttribute>F9CC82AA-9B99-4FD9-70D7-04D04A3275B7</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>20</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idTrabajador1" id="43558F96-BCA9-BA7E-C2D5-E95C66E9D5D3">
+<createdBy>Al</createdBy>
+<createdTime>2017-04-25 17:19:34 UTC</createdTime>
+<generatorID>B9D72ABC-CC37-C63B-1DDF-45526F9E122C</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
+<referedAttribute>410B3E9F-0C5A-AFC2-A2C4-DEB86E57BB39</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hExtra" id="E7E30407-4ABA-9B94-ADDF-B6BCC4FBB714">
+<createdBy>Al</createdBy>
+<createdTime>2017-04-25 18:38:52 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -142,6 +205,10 @@
 <createdBy>Al</createdBy>
 <createdTime>2017-04-24 11:01:06 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="false"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>67A0A2F2-9EA9-5998-9814-91B3B613631C</attributeRef>

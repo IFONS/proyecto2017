@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="11BEBAC9-E2BD-2856-F066-817E37BD91A7" name="Usuario">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C42A3834-C1CD-1ABC-6C1B-BDCB25DD5910" name="TipoTrabjador">
 <createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:04:58 UTC</createdTime>
+<createdTime>2017-05-05 10:27:48 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
 <item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="idUsuario" id="2CEDB704-AA72-7AAE-735A-298297FB19BF">
+<Attribute name="idTipo" id="B93F3230-2AE1-5447-E2D3-D55B4A2F3EFB">
 <createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:05:05 UTC</createdTime>
+<createdTime>2017-05-05 10:28:01 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
 <item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
@@ -25,12 +25,12 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>20</dataTypePrecision>
-<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Usuario" id="A50F56B5-BBDB-D1FB-66C8-D401C84E4AB3">
+<Attribute name="tipo" id="868AA232-BCBC-2EAF-B128-27C8E71F0FF5">
 <createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:05:29 UTC</createdTime>
+<createdTime>2017-05-05 10:29:02 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
 <item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
@@ -38,26 +38,12 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Contraseña" id="DC555CB5-5D75-9F1A-77A1-6379CD0132F7">
+<Attribute name="idTrabajador" id="820FA026-8947-03AF-8AE2-C9D505C4DEE5">
 <createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:05:45 UTC</createdTime>
-<ownerDesignName>logico</ownerDesignName>
-<engineerTo>
-<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="idTrabajador" id="888445D3-D23F-6E3B-3386-D2CE91B4CBF5">
-<createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:15:36 UTC</createdTime>
-<generatorID>11D5A85F-3F96-46E4-08A4-5243452CF15B</generatorID>
+<createdTime>2017-05-05 10:30:04 UTC</createdTime>
+<generatorID>76CF5B71-E839-4519-6179-45D861FF8509</generatorID>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
 <item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
@@ -67,21 +53,20 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="76078622-4A8E-B116-1FC2-05BC2E757720" name="Usuario PK">
+<identifier id="41731538-DF7F-7024-1C03-148FAC51FEB7" name="TipoTrabjador PK">
 <createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:05:28 UTC</createdTime>
+<createdTime>2017-05-05 10:28:58 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="false"/>
+<item key="50CBF754-CED8-B653-A1A2-51C74F0B8BD9" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>2CEDB704-AA72-7AAE-735A-298297FB19BF</attributeRef>
+<attributeRef>B93F3230-2AE1-5447-E2D3-D55B4A2F3EFB</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

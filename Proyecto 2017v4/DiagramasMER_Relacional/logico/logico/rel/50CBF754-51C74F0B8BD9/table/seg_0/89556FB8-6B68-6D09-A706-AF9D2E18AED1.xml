@@ -58,9 +58,9 @@
 <colUsage columnID="BC243E31-38B9-3541-1559-858D794FB7DC"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="2B341C31-78C2-7537-85C7-47679C268A3B" name="Aviso__IDX">
+<ind_PK_UK id="8B499A89-F5EB-736C-EC4A-92E7A8ADDCD7" name="Aviso__IDX">
 <createdBy>Al</createdBy>
-<createdTime>2017-04-24 11:22:52 UTC</createdTime>
+<createdTime>2017-05-05 10:30:33 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
