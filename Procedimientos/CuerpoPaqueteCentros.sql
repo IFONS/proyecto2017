@@ -8,12 +8,12 @@
   )
   IS
   BEGIN
-    OPEN un_cursor FOR
-      select nombre
-      from centros; 
+    OPEN un_cursor FOR 'SELECT nombre FROM centros'; 
   EXCEPTION
     WHEN NO_DATA_FOUND THEN
       RAISE_APPLICATION_ERROR(-20107, 'NO SE ENCONTRARON CENTROS');
+    WHEN DEFAULT THEN
+      RAISE_APPLICATION_ERROR(-20011, 'ERROR DESCONOCIDO');
   END visualizar_lista_nombre_centro;
   
  
@@ -23,11 +23,15 @@
   )
   IS
   BEGIN
-    OPEN un_cursor FOR
-      select idCentro, nombre, calle, numero, cp, ciudad, provincia, telefono from centros where nombre = pNombreCentro;
+      SELECT idCentro, nombre, calle, numero, cp, ciudad, provincia, telefono INTO un_cursor FROM centros WHERE nombre = pNombreCentro;
     EXCEPTION
       WHEN NO_DATA_FOUND THEN
         RAISE_APPLICATION_ERROR(-20009,'NO SE ENCONTRÓ EL CENTRO');
+      WHEN DEFAULT THEN
+        RAISE_APPLICATION_ERROR(-20011, 'ERROR DESCONOCIDO');
+      WHEN TOO_MANY_ROWS THEN
+        RAISE_APPLICATION_ERROR(-20018, 'SE HA ENCONTRADO MAS DE UN CENTRO');
+      
   END visualizar_datos_centro_nombre;
 
 
